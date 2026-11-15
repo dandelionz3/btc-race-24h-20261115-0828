@@ -1,5 +1,8 @@
 // Long momentum CBBTC strategy: buy after a strong 240-bar rise and manage the
 // position with profit, loss, trailing drawdown, and time exits. Verified on this race's dev window.
+// Dev grade (btc-race-24h-20261115-0828-dev): net PnL +7.875346 USDC, 2 trades, max drawdown 0.0047, guardrails met, action log e5e1e4abca73c2a98d1dbfe839427ddf93e263ccf64087f3b1dcb7b3cb1f9db3. Same parameters also passed the previous race's dev window (+8.767216 USDC).
+// Grade locally from /home/hatch/workspace/makefun/btc-race-24h-20261115-0828-kit:
+// node cli/makefun.mjs grade-local --kit . --bot /home/hatch/workspace/makefun/btc-race-24h-20261115-0828-entry --driver process
 import { runBars, type BarsState, type BuyInput, type SellInput } from './vendor/makefun-bars.ts';
 
 const closes: number[] = [];
