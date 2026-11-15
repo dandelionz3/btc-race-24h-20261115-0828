@@ -1,5 +1,5 @@
 // Long-momentum on CBBTC: enter with all cash when the 240-bar close return reaches +140 bps, after a 240-bar post-sale cooldown and with at least 1,000,000 units of cash. While holding, exit at +100 bps profit, -60 bps loss, after a +50 bps peak gain followed by an 80 bps drawdown from peak, or after 480 bars; orders allow 100 bps maximum slippage.
-// Verified on this race's dev window (btc-race-24h-20261115-0828-dev): net PnL +7.875346 USDC, 2 trades, max drawdown 0.0047, guardrails met. Same parameters also passed the previous race's dev window (+8.767216 USDC).
+// Verified on this race's dev window (btc-race-24h-20261115-0828-dev): net PnL +7.875346 USDC, 2 trades, max drawdown 0.0047, guardrails met, action log e5e1e4abca73c2a98d1dbfe839427ddf93e263ccf64087f3b1dcb7b3cb1f9db3. Same parameters also passed the previous race's dev window (+8.767216 USDC).
 // Grade locally from /home/hatch/workspace/makefun/btc-race-24h-20261115-0828-kit:
 // node cli/makefun.mjs grade-local --kit . --bot /home/hatch/workspace/makefun/btc-race-24h-20261115-0828-entry --driver process
 import { runBars, type BarsState, type BuyInput, type SellInput } from './vendor/makefun-bars.ts';
