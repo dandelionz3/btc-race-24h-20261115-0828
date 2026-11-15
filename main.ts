@@ -30,7 +30,7 @@ await runBars({
         entryBar = state.seq;
       }
 
-      if (close > peakClose) peakClose = close;
+      peakClose = Math.max(peakClose, close);
       const pnlBps = ((close / entryClose) - 1) * 10_000;
       const peakGainBps = ((peakClose / entryClose) - 1) * 10_000;
       const drawdownBps = ((peakClose - close) / peakClose) * 10_000;
